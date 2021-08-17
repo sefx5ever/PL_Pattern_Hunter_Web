@@ -1,0 +1,248 @@
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/************ Navigation Bar ************/
+.account-nav {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.nav-ele {
+    width: 100%;
+    margin: 5px 0 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-self: center;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.ele-profile-dropdown {
+    display: none;
+}
+
+.ele-li, #ele-profile {
+    margin-right: 3%;
+}
+
+#ele-picture {
+    width: 20px;
+    height: 20px;
+}
+
+#ele-profile {
+    display: flex;
+    flex-direction: row;
+}
+
+#ele-profile,
+.ele-li>a,
+.ele-li>div>span{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.ele-li>a:hover {
+    color: #C1DB33;
+}
+
+/************ END of Navigation Bar ************/
+
+/************ Function Area ************/
+.account-button {
+    width: 100%;
+    background-color: #0078D4;
+    display: flex;
+    flex-direction: row;
+    overflow-wrap: break-word;
+}
+
+.button-ele {
+    width: 100%;
+    margin: 1% 0 1% 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.button-ele>button {
+    font-size: 15px;
+}
+
+.ele-del-acc, 
+.ele-del-save{
+    width: 100px;
+    height: 25px;
+    border: none;
+    background-color: white;
+}
+
+.ele-del-acc {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+/************ END of Function Area ************/
+
+/************ Information ************/
+#account-information {
+    text-align: center;
+}
+
+#information-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+/************ END of Information ************/
+
+/************ Account Setting Area ************/
+.account-setting {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
+
+#account-username {
+    -webkit-touch-callout: none;
+    /*Make the label text unselectable*/
+}
+
+.account-setting-left {
+    width: 50%;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.account-setting-left>div {
+    width: 70%;
+    height: 30px;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account-setting-left>div>input{
+    width: 75%;
+    height: 100%;
+}
+
+.account-setting-right {
+    width: 50%;
+    height: auto;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.account-setting-right>div {
+    text-align: center;
+}
+
+.account-setting-right>div>div>img {
+    width: 50%;
+    height: 50%;
+    border: none;
+    border-radius: 50%;
+}
+
+.right-profile-picture {
+    margin-top: 5%;
+}
+
+.right-profile-picture>label {
+    background-color: #0078D4;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+/************ END of Account Setting Area ************/
+
+@media (max-width: 700px) {
+    .account-setting-left,
+    .account-setting-right {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .account-setting-left {
+        align-items: center;
+    }
+
+    .account-setting-left>div>label {
+        width: 18%;
+    }
+
+    #nav-ele, #ele-profile {
+        display: none;
+    }
+
+    .nav-ele {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ele-li {
+        margin-bottom: 1%;
+    }
+
+    .ele-profile-dropdown {
+        width: 100%;
+        background: white;
+        border: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ele-profile-dropdown>div:nth-child(2) {
+        margin-left: 3%;
+        font-weight: bold;
+    }
+    
+    .ele-profile-dropdown-icon {
+        margin-left: auto;
+    }
+
+    .ele-profile-dropdown-icon>img {
+        width: 20px;
+        transform: rotate(90deg);
+    }
+
+    .ele-profile-dropdown-icon>img:hover {
+        transform: rotate(0deg);
+    }
+
+    .ele-picture {
+        display: flex;
+    }
+
+    .account-nav {
+        top: 0;
+        position:sticky;
+        overflow: hidden;
+    }
+}

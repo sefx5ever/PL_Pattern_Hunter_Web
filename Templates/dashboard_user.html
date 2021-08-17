@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="{% static '/pictures/peculab-logo.jpg' %}"> -->
+    <!-- <link rel="stylesheet" href="{% static '/css/dashboard_user.css' %}"> -->
+    <script src="{% static '/js/echarts.min.js' %}" type="text/javascript"></script>
+    <title>Pattern Hunter | Dashboard</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- <div class="account-nav">
+        <button class="ele-profile-dropdown">
+            <div class="ele-picture">
+                <img id="ele-picture" src="{% static '/pictures/profile.png' %}" alt="">
+            </div>
+            <div>
+                <span class="ele-name">匿名帳號</span>
+            </div>
+            <div class="ele-profile-dropdown-icon">
+                <img id="dropdown-icon" src="{% static '/pictures/dropdown_icon.png' %}" alt="">
+            </div>
+        </button>
+        <ul class="nav-ele" id="nav-ele">
+            <li id="ele-profile">
+                <div class="ele-picture">
+                    <img id="ele-picture" src="{% static '/pictures/profile.png' %}" alt="">
+                </div>
+                <div>
+                    <span class="ele-name">匿名帳號</span>
+                </div>
+            </li>
+            <li class="ele-li"><a href="#">帳號總覽</a></li>
+            <li class="ele-li"><a href="/dashboardUser">策略查詢</a></li>
+            <li class="ele-li"><a href="/accountSetting">帳號設定</a></li>
+            <li class="ele-li"><a href="/login">登出</a></li>
+        </ul>
+    </div> -->
+    <!-- Search Bar -->
+    <!-- <div class="dashboard-search">
+        <ul class="search-ele">
+            <li id="ele-strategy">
+                <label for="strategy-option" id="strategy-label">策略採用</label>
+                <select name="strategy-option" id="strategy-option">
+                    <option default value="Pattern Hunter">選擇策略</option>
+                    <option value="Pattern Hunter">Pattern Hunter</option>
+                    <option value="Pattern Hunter">Pattern Hunter</option>
+                </select>
+            </li>
+            <li id="ele-no">
+                <label for="no-label" id="no-label">查詢代號</label>
+                <input type="text" placeholder="請輸入查詢代碼">
+            </li>
+            <li id="ele-date">
+                <label for="date-label" id="date-label">日期</label>
+                <input type="date" id="date-option-start" name="start-date">
+                <span> - </span>
+                <input type="date" id="date-option-end" name="end-date">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </li>
+            <li id="ele-submit">
+                <button type="submit" id="submit-button">查詢</button>
+            </li>
+        </ul>
+    </div> -->
+    <!-- Information -->
+    <!-- <div id="dashboard-information">
+        <div id="information-title">策略查詢</div>
+        <div id="information-detail">GOOGL | 2020-12-20 - 2021-01-01 | Pecu Researcher</div>
+    </div> -->
+    <!-- Dashboard -->
+    <div id="dashboard-layout" style="width: 1000px; height: 1000px;"></div>
+    <script type="text/javascript" src="{% static '/js/dashboard_user.js' %}"></script>
+
+</body>
+</html>

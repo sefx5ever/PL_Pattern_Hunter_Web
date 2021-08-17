@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/pictures/peculab-logo.jpg' %}">
+    <link rel="stylesheet" href="{% static '/css/account_setting.css' %}">
+    <title>Pattern Hunter | Account Setting</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="account-nav">
+        <button class="ele-profile-dropdown">
+            <div class="ele-picture">
+                <img id="ele-picture" src="{% static '/pictures/profile.png' %}" alt="">
+            </div>
+            <div>
+                <span class="ele-name">匿名帳號</span>
+            </div>
+            <div class="ele-profile-dropdown-icon">
+                <img id="dropdown-icon" src="{% static '/pictures/dropdown_icon.png' %}" alt="">
+            </div>
+        </button>
+        <ul class="nav-ele" id="nav-ele">
+            <li id="ele-profile">
+                <div class="ele-picture">
+                    <img id="ele-picture" src="{% static '/pictures/profile.png' %}" alt="">
+                </div>
+                <div>
+                    <span class="ele-name">匿名帳號</span>
+                </div>
+            </li>
+            <li class="ele-li"><a href="#">帳號總覽</a></li>
+            <li class="ele-li"><a href="/dashboardUser">策略查詢</a></li>
+            <li class="ele-li"><a href="/accountSetting">帳號設定</a></li>
+            <li class="ele-li"><a href="/login">登出</a></li>
+        </ul>
+    </div>
+    <!-- Function Area -->
+    <div class="account-button">
+        <span class="button-ele">
+            <button class="ele-del-acc" id="del-account-submit" type="menu">刪除帳號</button>
+            <button class="ele-del-save" id="update-account-submit" type="menu">確認更新</button>
+        </span>
+    </div>
+    <!-- Information -->
+    <div id="account-information">
+        <div id="information-title">帳號設定</div>
+    </div>
+    <!-- Account Setting Area -->
+    <div class="account-setting">
+        <div class="account-setting-left">
+            <div>
+                <label for="account-username">帳號</label>
+                <input type="text" name="account-username" id="account-username" disabled>
+            </div>
+            <div>
+                <label for="account-email">電子郵件</label>
+                <input type="email" name="account-email" id="account-email" disabled>
+            </div>
+            <div>
+                <label for="account-name">姓名</label>
+                <input type="text" name="account-name" id="account-name">
+            </div>
+            <div>
+                <label for="account-password">密碼</label>
+                <input type="password" name="account-password" id="account-password">
+            </div>
+        
+            <div>
+                <label for="account-re-password">確認密碼</label>
+                <input type="password" name="account-re-password" id="account-re-password">
+            </div>
+        </div>
+        <div class="account-setting-right">
+            <div>
+                <div>
+                    <img src="{% static '/pictures/profile.png' %}">
+                </div>
+                <form class="right-profile-picture" name="account-setting-form">
+                    <input type="file" id="actual-btn" name="img" accept="image/*" hidden />
+                    <label for="actual-btn">上傳圖片</label>
+                </form>
+                <script src="{% static '/js/account_setting.js' %}"></script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

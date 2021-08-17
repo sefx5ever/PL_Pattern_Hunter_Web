@@ -1,0 +1,7 @@
+django
+django-environ
+djangorestframework
+channels
+channels_redis
+tensorflow>2.2
+numpy

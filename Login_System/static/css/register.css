@@ -1,0 +1,181 @@
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/************ Background Setting ************/
+#register-layout {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-wrap: anywhere;
+}
+
+#register-background {
+    width: auto;
+    height: auto;
+}
+
+#register-background>img {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.register-background-cover {
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100%;
+    min-width: 50%;
+    /* background:#fff; */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+/************ END of Background Setting ************/
+
+/************ Left Area Setting ************/
+#register-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    width: 50%;
+    height: 100%; 
+    z-index: 1;
+}
+
+#register-left>img {
+    border-radius: 5%;
+    max-width: 50%;
+}
+/************ END of Left Area Setting ************/
+
+/************ Right Area Setting ************/
+#register-right {
+    width: 50%;
+    min-height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+#register-right-form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    z-index: 1;
+    
+}
+
+#register-right-form>form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 450px;
+}
+
+#register-right-form>form>input,
+#register-form-identity,
+#register-form-submit {
+    margin-bottom: 5%;
+    height: 40px;
+    border: 0;
+}
+
+#register-right-form>form>input:hover {
+    border-color: #C1DB33;
+}
+
+#register-form-username::placeholder, 
+#register-form-password::placeholder,
+#register-form-repassword::placeholder {
+    text-align: center;
+}
+
+.main-text {
+    font-size: 100px;
+    font-weight: bolder;
+    font-family: "Lucida Console";
+    color: #4B93EC;
+    text-shadow: 2px 2px white;
+    text-align: left;
+    margin-bottom: 5%;
+}
+
+#register-form-submit>button {
+    border-radius: 30px;
+    border: 3px solid #0078D4;
+    background-color: #0078D4;
+    width: 30%;
+    height: 100%;
+    font-weight: bolder;
+    font-size: 15px;
+    color: white;
+}
+
+.register-right-form-label {
+    text-align: left;
+    margin-bottom: 1%;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+}
+
+.register-right-form-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+.register-right-form-options>a {
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+}
+/************ END of Right Area Setting ************/
+
+@media (max-width: 1024px) {
+    #register-left, #register-right {
+        flex-basis: 100%;
+    }
+
+    #register-left>img {
+        min-width: 20%;
+    }
+
+    .register-background-cover {
+        top: 40%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-text {
+        font-size: 70px;
+        text-align: center;
+    }
+
+    .register-right-form-label,
+    #register-form-username,
+    #register-form-password,
+    #register-form-repassword,
+    #register-form-identity {
+        padding: 0;
+        margin: 0 5% 0 5%;
+    }
+
+    #register-form-submit {
+        margin-top: 3%;
+    }
+}

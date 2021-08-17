@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/pictures/peculab-logo.jpg' %}">
+    <link rel="stylesheet" href="{% static '/css/register.css' %}">
+    <title>Pattern Hunter | Sign Up</title>
+</head>
+<body>
+    <!-- Background Setting -->
+    <div id="register-background">
+        <div class="register-background-cover"></div>
+        <img src="{% static '/pictures/login_background.png' %}" alt="">
+    </div>
+    <div id="register-layout">
+        <!-- Left Area --> 
+        <div id="register-left">
+            <!-- Display Logo -->
+            <img src="{% static '/pictures/pattern_hunter_logo.png' %}" alt="">
+        </div>
+
+        <!-- Right Area -->
+        <div id="register-right">
+            <!-- Register Form -->
+            <div id="register-right-form">
+                <form name="register-form">
+                    <label class="register-right-form-label" for="user">帳號</label>
+                    <input type="text" id="register-form-user" name="user" placeholder="輸入帳號">
+                    <label class="register-right-form-label" for="name">姓名</label>
+                    <input type="text" id="register-form-name" name="name" placeholder="輸入姓名">
+                    <label class="register-right-form-label" for="username">電子郵件</label>
+                    <input type="email" id="register-form-email" name="email" placeholder="輸入電子郵件">
+                    <label class="register-right-form-label" for="password">密碼</label>
+                    <input type="password" id="register-form-password" name="password" placeholder="輸入密碼">
+                    <label class="register-right-form-label" for="password">確認密碼</label>
+                    <input type="password" id="register-form-repassword" name="re-password" placeholder="確認密碼">
+                    <label class="register-right-form-label" for="identity">身份</label>
+                    <select name="identity" id="register-form-identity">
+                        <option value="0">一般用戶</option>
+                        <option value="1">研究員</option>
+                    </select>
+                    <div id="register-form-submit">
+                        <button type="submit" id="register-submit" value="SUBMIT">註冊</button>
+                    </div>
+                    <div class="register-right-form-options">
+                        <a href="/register">註冊帳號</a>
+                        <a href="/resetPassword">忘記密碼?</a>
+                    </div>
+                </form>
+                <script src="{% static '/js/register.js' %}" type="text/javascript"></script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
