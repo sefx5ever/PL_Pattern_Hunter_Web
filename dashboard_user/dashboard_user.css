@@ -1,0 +1,186 @@
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+/************ Navigation Bar ************/
+.account-nav {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.nav-ele {
+    width: 100%;
+    margin: 5px 0 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-self: center;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.ele-profile-dropdown {
+    display: none;
+}
+
+.ele-li, #ele-profile {
+    margin-right: 3%;
+}
+
+#ele-picture {
+    width: 20px;
+    height: 20px;
+}
+
+#ele-profile {
+    display: flex;
+    flex-direction: row;
+}
+
+#ele-profile,
+.ele-li>a,
+.ele-li>div>span{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.ele-li>a:hover {
+    color: #C1DB33;
+}
+/************ END of Navigation Bar ************/
+
+/************ Search Bar ************/
+.dashboard-search {
+    width: 100%;
+    background-color: #0078D4;
+    display: flex;
+    flex-direction: row;
+    overflow-wrap: break-word;
+}
+
+.search-ele {
+    width: 100%;
+    margin: 1% 0 1% 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.search-ele>li {
+    flex-basis: 25%;
+    height: 25px;
+    text-align: center;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+#strategy-label,
+#no-label,
+#date-label{
+    margin-right: 3%;
+    color: white;
+    font-weight: bolder;
+}
+
+#strategy-option,#submit-button,
+#ele-no>input, #ele-date>input {
+    height: 25px;
+    border: none;
+    background-color: white;
+}
+
+#submit-button {
+    width: 25%;
+}
+
+/************ END of Search Bar ************/
+
+/************ Information ************/
+#dashboard-information {
+    text-align: center;
+}
+
+#information-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+/************ END of Information ************/
+
+/************ Dashboard ************/
+#dashboard-layout {
+    width: auto;
+    height: 90%;
+}
+/************ END of Dashboard ************/
+
+@media (max-width: 700px) {
+    #nav-ele, #ele-profile {
+        display: none;
+    }
+
+    .nav-ele {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ele-li {
+        margin-bottom: 1%;
+    }
+
+    .ele-profile-dropdown {
+        width: 100%;
+        background: white;
+        border: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ele-profile-dropdown>div:nth-child(2) {
+        margin-left: 3%;
+        font-weight: bold;
+    }
+    
+    .ele-profile-dropdown-icon {
+        margin-left: auto;
+    }
+
+    .ele-profile-dropdown-icon>img {
+        width: 20px;
+        transform: rotate(90deg);
+    }
+
+    .ele-profile-dropdown-icon>img:hover {
+        transform: rotate(0deg);
+    }
+
+    .ele-picture {
+        display: flex;
+    }
+
+    .account-nav {
+        top: 0;
+        position: sticky;
+        overflow: hidden;
+    }
+
+    .search-ele>li {
+        flex-basis: 100%;
+    }
+}
